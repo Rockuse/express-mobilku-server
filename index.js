@@ -1,7 +1,7 @@
 const http = require('http');
-const app = require('./src/app');
-const { env } = require('./src/utility/config');
-const { dbsync } = require('./src/utility/db');
+const app = require('./api');
+const { env } = require('./api/utility/config');
+const { dbsync } = require('./api/utility/db');
 
 const server = http.createServer(app);
 
