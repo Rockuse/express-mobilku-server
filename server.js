@@ -5,7 +5,7 @@ const { dbsync } = require('./src/utility/db');
 
 const server = http.createServer(app);
 
-const PORT = env('PORT');
+const PORT = env('PORT') || 3030;
 const init = async () => {
   try {
     await dbsync();
