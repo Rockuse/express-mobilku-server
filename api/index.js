@@ -3,6 +3,10 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.static('public'));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 // Add headers before the routes are defined
 app.use((req, res, next) => {
   // Website you wish to allow to connect
