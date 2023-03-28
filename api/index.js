@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const helmet = require('helmet');
 
 const app = express();
 app.use(express.static('public'));
@@ -23,7 +22,6 @@ app.use((req, res, next) => {
   next();
 });
 app.use(cors({ origin: '*' }));
-app.use(helmet());
 require('./routes')(app, express);
 
 module.exports = app;
