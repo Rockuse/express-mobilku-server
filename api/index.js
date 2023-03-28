@@ -4,7 +4,7 @@ const helmet = require('helmet');
 
 const app = express();
 app.use(express.static('public'));
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(helmet());
 require('./routes')(app, express);
 
