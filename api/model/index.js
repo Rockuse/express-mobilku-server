@@ -7,5 +7,8 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.profiles = require('./profile.model')(sequelize, Sequelize);
+db.user = require('./user.model')(sequelize, Sequelize);
+db.checklist = require('./checklist.model')(sequelize, Sequelize);
+db.checklistItem = require('./checklistItem.model')(sequelize, Sequelize);
 
 module.exports = db;

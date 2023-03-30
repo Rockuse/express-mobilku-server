@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 const db = require('../model');
 
 const Profiles = db.profiles;
